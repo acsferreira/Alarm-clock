@@ -1,5 +1,6 @@
 package com.example.and.timerdemo;
 
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     boolean counting=false;
     Button button;
     CountDownTimer yourCountDownTimer;
+    MediaPlayer mediaPlayer;
 
     public void countDown(View view){
 
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
             button.setText("GO!");
             counting=false;
             yourCountDownTimer.cancel();
+            seekBar.setProgress(30);
+            setClock(30);
 
         } else {
             seekBar.setEnabled(false);
@@ -48,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
                     seekBar.setEnabled(true);
                     button.setText("GO!");
                     counting=false;
+                    mediaPlayer.start();
+                    seekBar.setProgress(30);
+                    setClock(30);
                 }
             }.start();
         }
@@ -71,22 +78,18 @@ public class MainActivity extends AppCompatActivity {
         seekBar.setMax(300);
         seekBar.setProgress(30);
         setClock(30);
-
+        mediaPlayer=MediaPlayer.create(this,R.raw.alarm);
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 setClock(i);
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
 
