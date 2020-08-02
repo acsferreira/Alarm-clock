@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.and.timerdemo.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="375dp"
+        android:layout_height="408dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/clock" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="88dp"
+        android:layout_height="25dp"
+        android:background="@color/colorAccent"
+        android:onClick="countDown"
+        android:text="GO!"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="225dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="500dp"
+        android:text="00:00"
+        android:textColor="@android:color/background_light"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.706" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="355dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="130dp"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.829" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="344dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Set your timer:"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.871" />
+
+</android.support.constraint.ConstraintLayout>
